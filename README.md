@@ -1,7 +1,7 @@
 # Trabalho Prático — SmartNotes API
 
-**Disciplina:** Programação Web com Foco em Segurança
-**Entrega:** `[data a definir]`
+**Disciplina:** Desenvolvimento Web e Frameworks Web
+**Entrega:** 22/03/2026
 
 ---
 
@@ -9,7 +9,7 @@
 
 O **SmartNotes** é uma aplicação de notas pessoais. Cada usuário cria uma conta e gerencia suas próprias notas — nenhum usuário pode ver ou modificar as notas de outro.
 
-O frontend da aplicação já está implementado e disponível no repositório. **O trabalho consiste em implementar a API** que o frontend consome.
+O frontend da aplicação já está implementado e disponível no presente repositório. **O trabalho consiste em implementar a API** que o frontend do presente repositório consome.
 
 ---
 
