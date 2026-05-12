@@ -1,0 +1,37 @@
+NOTA: 10.0
+
+COMENTÁRIOS:
+Regra 1 - Tecnologias:
+Todas as tecnologias obrigatórias foram usadas durante a implementação.
+
+Regra 2 - Modelos Prisma:
+Os modelos do Prisma foram implementados corretamente.
+
+Regra 3 - Endpoints:
+Todas as rotas da API foram implementadas.
+
+Regra 4 - Validação de senha:
+As senhas dos usuários seguem todos os critérios pedidos no documento de especificação.
+
+Regra 5 - Requisitos de segurança:
+- Gerenciamento de segredos: DATABASE_URL, SESSION_SECRET e FRONTEND_URL são lidos de variáveis de ambiente. 
+- Hash de senha: bcryptjs é utilizado corretamente no signup. 
+- Sessão segura: httpOnly: true, sameSite: "lax", saveUninitialized: false e secure condicional em produção. 
+- Autorização IDOR: As operações em notas usam findFirst com userId, retornando 404 quando não pertencem ao usuário. 
+- Rate limiting: Limite global de 100 req/15min e limite de 10 req/15min nos endpoints de auth (signup e login). 
+- CORS: Configurado com origin via env e credentials: true. 
+- Helmet: Aplicado globalmente, cobrindo X-Powered-By, nosniff e HSTS. 
+- Timing attack: Implementado com DUMMY_HASH executando bcrypt.compare mesmo quando o usuário não existe. 
+
+Regra 6 - Nota:
+- Endpoints funcionando corretamente (30%): atendido integralmente.
+- Validações de entrada Joi (10%): atendido integralmente.
+- Autenticação por sessão (15%): atendido integralmente.
+- Autorização IDOR (15%): atendido integralmente.
+- Rate limiting (5%): atendido integralmente.
+- CORS (5%): atendido integralmente.
+- Hash de senha e segredos em env (10%): atendido integralmente.
+- Timing attack (5%): atendido integralmente.
+- Helmet (5%): atendido integralmente.
+
+Trabalho excelente, bem estruturado e cumprindo todos os requisitos de segurança especificados.
